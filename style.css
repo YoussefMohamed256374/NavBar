@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+* {
+	font-family: 'Nunito', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	transition: all 0.2s linear;
+}
+:root {
+	--green: rgb(74, 22, 73);
+	--white: #fff;
+	--light-color: #779;
+}
+
+html::-webkit-scrollbar {
+	width: 1rem;
+}
+html::-webkit-scrollbar-track {
+	background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+	background: var(--green);
+}
+.btn {
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 0.9rem 3rem;
+	font-size: 1.7rem;
+	background: var(--green);
+	color: #fff;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: var(--green);
+}
+
+.header {
+	padding: 2rem 9%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header .logo {
+	font-size: 2.5rem;
+	color: var(--green);
+	font-weight: bolder;
+}
+
+.header .logo i {
+	padding-right: 0.3rem;
+}
+
+.header .search-form {
+	height: 5rem;
+	width: 50rem;
+	border-radius: 5rem;
+	background: var(--white);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	border: 0.1rem solid var(--green);
+}
+
+.header .search-form input {
+	height: 100%;
+	width: 100%;
+	padding: 0 1.2rem;
+	font-size: 1.6rem;
+	color: var(--green);
+	text-transform: none;
+}
+
+.header .search-form label {
+	font-size: 2.2rem;
+	padding-right: 1.7rem;
+	cursor: pointer;
+	color: var(--green);
+}
+
+.header .search-form label:hover {
+	color: var(--light-color);
+}
+
+.header .icons div {
+	margin-left: 2rem;
+	font-size: 2.5rem;
+	cursor: pointer;
+	color: var(--green);
+}
+
+.header .icons div:hover {
+	color: var(--light-color);
+}
+
+#search-btn {
+	display: none;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(360deg);
+		opacity: 0;
+	}
+}
+
+#closer {
+	position: fixed;
+	top: 1.5rem;
+	right: 2rem;
+	font-size: 5rem;
+	cursor: pointer;
+	z-index: 10000;
+	color: var(--green);
+	animation: rotate 0.4s linear 0.4s backwards;
+	display: none;
+}
+
+#closer:hover {
+	color: var(--light-color);
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	right: -101%;
+	z-index: 1000;
+	width: 35rem;
+	height: 100vh;
+	background: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+
+.navbar.active {
+	right: 0;
+	box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+	transition: 0.4s linear;
+}
+
+.navbar a {
+	margin: 1rem 0;
+	font-size: 2.5rem;
+	color: var(--green);
+}
+
+.navbar a:hover {
+	color: var(--light-color);
+}
+
+.login-form {
+	position: fixed;
+	top: 0;
+	right: -101%;
+	z-index: 1000;
+	width: 35rem;
+	height: 100vh;
+	background: var(--white);
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-form.active {
+	right: 0;
+	box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+	transition: 0.4s linear;
+}
+
+.login-form form {
+	padding: 1.7rem;
+	border: 0.1rem solid var(--green);
+}
+
+.login-form form h3 {
+	font-size: 2.2rem;
+	padding-bottom: 1rem;
+	color: var(--green);
+}
+
+.login-form form .box {
+	width: 100%;
+	text-transform: none;
+	font-size: 1.5rem;
+	color: var(--green);
+	padding: 1rem 1.2rem;
+	border: 0.1rem solid var(--green);
+	margin: 0.7rem 0;
+}
+
+.login-form form .remember {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.login-form form .remember label {
+	padding: 1rem 0;
+	cursor: pointer;
+	font-size: 1.5rem;
+	color: var(--light-color);
+}
+
+.login-form form .btn {
+	margin: 1rem 0;
+	width: 100%;
+	text-align: center;
+}
+
+.login-form form p {
+	padding-top: 1rem;
+	font-size: 1.4rem;
+	color: var(--light-color);
+}
+
+.login-form form p a {
+	color: var(--green);
+}
+
+.login-form form p a:hover {
+	text-decoration: underline;
+}
+
+@keyframes fadeOut {
+	0% {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+		opacity: 0;
+	}
+}
+
+
